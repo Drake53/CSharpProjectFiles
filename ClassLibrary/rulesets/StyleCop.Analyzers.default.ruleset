@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="StyleCop" Description="Default configuration of StyleCop.Analyzers in a class library project." ToolsVersion="16.0">
+<RuleSet Name="StyleCop-lib" Description="Default configuration of StyleCop.Analyzers in a class library project." ToolsVersion="16.0">
   <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
 
     <!-- Special Rules -->
