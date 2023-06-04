@@ -1,0 +1,38 @@
+<Project>
+
+  <ItemGroup>
+    <SourceRoot Include="$(MSBuildThisFileDirectory)/"/>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <LangVersion>10.0</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition="'$(IsValidationBuild)'=='true'">
+      <ItemGroup>
+        <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory).config/StyleCop.Analyzers.strict.analyzerconfig" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(IsPublishBuild)'!='true'">
+      <ItemGroup>
+        <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory).config/StyleCop.Analyzers.default.analyzerconfig" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup>
+        <AnalysisMode>None</AnalysisMode>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+
+  <ItemGroup Condition="'$(IsValidationBuild)'=='true' Or '$(IsPublishBuild)'!='true'">
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.435">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory).config/stylecop.json" Visible="false" />
+  </ItemGroup>
+
+</Project>
