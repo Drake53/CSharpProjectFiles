@@ -8,6 +8,16 @@
       "systemUsingDirectivesFirst": true,
       "usingDirectivesPlacement": "outsideNamespace"
     },
+    
+    "namingRules":
+    {
+      "tupleElementNameCasing": "PascalCase"
+    },
+    
+    "maintainabilityRules":
+    {
+      "topLevelTypes": [ "class", "struct", "enum" ]
+    },
 
     "layoutRules":
     {
@@ -32,6 +42,7 @@
     "indentation":
     {
       "indentationSize": 4,
+      "tabSize": 4,
       "useTabs": false
     }
   }
