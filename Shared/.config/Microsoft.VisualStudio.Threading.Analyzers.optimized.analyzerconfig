@@ -1,4 +1,5 @@
 ### Optimized configuration of Microsoft.VisualStudio.Threading.Analyzers for projects not using Microsoft.VisualStudio.Threading ###
+### https://github.com/microsoft/vs-threading/blob/main/doc/analyzers/index.md                                                    ###
 
 ### Critical Rules ###
 dotnet_diagnostic.VSTHRD001.severity = none
