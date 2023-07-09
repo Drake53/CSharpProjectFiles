@@ -1,4 +1,5 @@
-### Strict configuration of StyleCop.Analyzers in a class library project ###
+### Strict configuration of StyleCop.Analyzers in a class library project          ###
+### https://github.com/DotNetAnalyzers/StyleCopAnalyzers/tree/master/documentation ###
 
 ### Special Rules ###
 dotnet_diagnostic.SA0001.severity = warning
