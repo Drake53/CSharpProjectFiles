@@ -1,6 +1,8 @@
 ### Default configuration of StyleCop.Analyzers in a class library project         ###
 ### https://github.com/DotNetAnalyzers/StyleCopAnalyzers/tree/master/documentation ###
 
+is_global = true
+
 ### Special Rules ###
 dotnet_diagnostic.SA0001.severity = warning
 dotnet_diagnostic.SA0002.severity = error

@@ -1,6 +1,8 @@
 ### Options configuration of Microsoft.CodeAnalysis.CodeStyle                        ###
 ### https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ ###
 
+is_global = true
+
 # IDE0003 and IDE0009
 dotnet_style_qualification_for_field = false
 dotnet_style_qualification_for_property = false
@@ -224,7 +226,3 @@ csharp_style_prefer_tuple_swap = false
 
 # IDE1005
 csharp_style_conditional_delegate_call = true
-
-
-
-
