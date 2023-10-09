@@ -53,7 +53,7 @@ csharp_style_expression_bodied_accessors = when_on_single_line
 # IDE0028
 dotnet_style_collection_initializer = true
 
-# IDE0029 and IDE0030
+# IDE0029, IDE0030, and IDE0270
 dotnet_style_coalesce_expression = true
 
 # IDE0031
@@ -223,6 +223,27 @@ csharp_style_prefer_extended_property_pattern = true
 
 # IDE0180
 csharp_style_prefer_tuple_swap = false
+
+# IDE0200
+csharp_style_prefer_method_group_conversion = true
+
+# IDE0210 and IDE0211
+csharp_style_prefer_top_level_statements = false
+
+# IDE0220
+dotnet_style_prefer_foreach_explicit_cast_in_source = always
+
+# IDE0230
+csharp_style_prefer_utf8_string_literals = true
+
+# IDE0250
+csharp_style_prefer_readonly_struct = true
+
+# IDE0251
+csharp_style_prefer_readonly_struct_member = true
+
+# IDE0260
+csharp_style_pattern_matching_over_as_with_null_check = false
 
 # IDE1005
 csharp_style_conditional_delegate_call = true
