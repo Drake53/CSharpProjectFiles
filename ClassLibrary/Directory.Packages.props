@@ -1,0 +1,23 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <!--<PackageVersion Include="" Version="" />-->
+  </ItemGroup>
+  <Target Name="SetProjectVersionsFromCentralPackageManagement">
+    <ItemGroup>
+      <ThisProjectPackageVersion Include="@(PackageVersion)" Condition="'%(PackageVersion.Identity)' == $(MSBuildProjectName)" />
+    </ItemGroup>
+    <PropertyGroup>
+      <PackageVersion>%(ThisProjectPackageVersion.Version)</PackageVersion>
+    </PropertyGroup>
+    <GetAssemblyVersion Condition="'$(AssemblyVersion)' == '' And '$(PackageVersion)' != ''" NuGetVersion="$(PackageVersion)">
+      <Output TaskParameter="AssemblyVersion" PropertyName="AssemblyVersion" />
+    </GetAssemblyVersion>
+    <PropertyGroup>
+      <FileVersion Condition="'$(FileVersion)' == ''">$(AssemblyVersion)</FileVersion>
+      <InformationalVersion Condition="'$(InformationalVersion)' == ''">$(PackageVersion)</InformationalVersion>
+    </PropertyGroup>
+  </Target>
+</Project>
