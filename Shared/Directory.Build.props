@@ -34,13 +34,13 @@
   <ItemGroup Condition="'$(IsValidationBuild)'=='true' Or '$(IsPublishBuild)'!='true'">
     <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory).config/Microsoft.CodeAnalysis.CodeStyle.options.analyzerconfig" />
 
-    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.6.40">
+    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory).config/Microsoft.VisualStudio.Threading.Analyzers.optimized.analyzerconfig" />
     
-    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.435">
+    <PackageReference Include="StyleCop.Analyzers">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
