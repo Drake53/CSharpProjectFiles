@@ -1,5 +1,5 @@
 <Project InitialTargets="SetProjectVersionsFromCentralPackageManagement">
-  <Target Name="SetProjectVersionsFromCentralPackageManagement">
+  <Target Name="SetProjectVersionsFromCentralPackageManagement" Condition="'$(ManagePackageVersionsCentrally)' == 'true'">
     <ItemGroup>
       <ThisProjectPackageVersion Include="@(PackageVersion)" Condition="'%(PackageVersion.Identity)' == $(MSBuildProjectName)" />
     </ItemGroup>
